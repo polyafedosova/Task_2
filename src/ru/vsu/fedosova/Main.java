@@ -32,18 +32,20 @@ public class Main {
         return new Line(a, b, c);
     }
 
-    static boolean isLinesParallel(Line l1, Line l2) {
+    static boolean isLinesParallel(Line l1, Line l2)
+    {
         return l1.a / l2.a == l1.b / l2.b;
     }
 
-    static boolean isLineMatch(Line l1, Line l2) {
+    static boolean isLineMatch(Line l1, Line l2)
+    {
         return isLinesParallel(l1, l2) && l1.c / l2.c == l1.b / l2.b;
     }
 
     static PointIntersect calsPoint(Line l1, Line l2)
     {
-        double x = (l1.b*l2.c-l2.b*l1.c) / (l1.a*l2.b-l1.b*l2.a);
-        double y = (l1.c*l2.a-l2.c*l1.a) / (l1.a*l2.b-l1.b*l2.a);
+        double x = (l1.b*l2.c - l2.b*l1.c) / (l1.a*l2.b - l1.b*l2.a);
+        double y = (l1.c*l2.a - l2.c*l1.a) / (l1.a*l2.b - l1.b*l2.a);
         PointIntersect point = new PointIntersect(x, y);
         return point;
     }
